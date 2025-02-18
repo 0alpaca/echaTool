@@ -1,0 +1,10 @@
+@charset "utf-8";
+body {
+  background-color: #202020;
+  color: #f0f0f0;
+}
+
+input {
+  background-color: #404040;
+  color: #f0f0f0
+}
