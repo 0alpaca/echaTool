@@ -1,18 +1,96 @@
 @charset "utf-8";
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
 body {
   background-color: #202020;
   color: #f0f0f0;
 }
 
-input {
+input, select {
   background-color: #404040;
-  color: #f0f0f0
+  color: #6f6
 }
 
-::placeholder: {
-  color: #f60
+input:hover {
+  background-color: #333;
+  color: #5e5;
 }
 
-div.form {
+::placeholder {
+  color: #aaa
+}
+
+input[type="text"]:focus, select:focus {
+  outline: 0;
+  border: 2px solid #084;
+}
+
+input[type="text"][disabled]{
+  background-color: #222;
+  color: #252;
+}
+
+input[type="button"] {
+  cursor: pointer;
+  margin: 0 50%;
+}
+
+input[type="button"]:active {
+  color: #383;
+  background-color: #222;
+}
+
+div#header {
+  background-color:  #333;
+  padding: 20px 0;
+  width: 100%;
+  height: 80px;
+  text-align:  center;
+}
+
+div#txf {
+  padding: 60px 0;
+}
+
+div#txa {
+  background-color: #282828;
+  padding: 10px;
+  width: 270px;
+  height: auto;
   margin: 0 auto;
 }
+
+div.tx {
+  padding: 5px 10px;
+  width: 250px;
+  height: 100px;
+  flex-direction: column;
+}
+
+div.tx:hover {
+  background-color: #222;
+}
+
+div.tb {
+  padding: 0 10px;
+  width: 250px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.tb:hover {
+  background-color: #222;
+}
+
+code {
+  color: #480
+}
+
