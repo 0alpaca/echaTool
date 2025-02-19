@@ -1,41 +1,82 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang = "ja">
  <head>
- <meta charset="utf-8">
+ <meta charset = "utf-8">
  <title>絵チャツール</title>
- <meta name="description" content="絵チャツール by あるぱか">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta property="og:image" content="https://pictsense.com/img/game_image.jpg" />
- <link rel="stylesheet" href="./style.css">
- <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
- <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
- <script src="./main.js"></script>
+ <meta name = "description" content = "絵チャツール by あるぱか">
+ <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+ <meta property = "og:image" content = "https://pictsense.com/img/game_image.jpg" />
+ <link rel = "stylesheet" href = "./style.css">
+ <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+ <script src = "http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+ <script src = "./main.js"></script>
  </head>
  <body>
 
- <header>絵チャツール</header>
-  
- <div id="form">
-  <form>
-   <div>
-     <label for="uucode">uucode:32 </label>
-     <input type="text" id="uuid" placeholder="abcdefghijklmn0123456789opqrstuv" size="30" />
-   </div>
-   <div>
-   <label for="hash">hash: </label>
-     <input type="text" id="wss" placeholder="12345678" size="10" />
-   </div>
-   <div>
-     <label for="wss">wss: </label>
-     <input type="text" id="url" placeholder="wss://draw-ydc2.kuku.lu:12345" size="27" />
-   </div>
-  </form>
- </div>
+
+  <div id = "header">
+    <header><h2>絵チャツール</h2></header>
+  </div>
 
 
- 
+  <div id = "txf">
+    <div id = "txa">
 
- <footer></footer>
+      <label for = "hash">
+        <div class = "tx" for = "hash">
+          <div>hash</div>
+          <input type = "text"  placeholder = "12345678" size = "35" onchange="myHash(this.value)" />
+          <code>hash</code>
+        </div>
+      </label>
+
+      <label for = "wss">
+        <div class = "tx" for = "wss">
+          <div>wss</div>
+          <input type = "text" placeholder = "wss://draw-ydc2.kuku.lu:12345" size = "35" onchange="myWss(this.value)" />
+          <code>ws.url</code>
+        </div>
+      </label>
+
+      <label for = "uucode">
+        <div class = "tx">
+          <div>uucode</div>
+          <input type = "text" placeholder = "abcdefghijklmn0123456789opqrstuv" size = "35" onchange="myUucode(this.value)" />
+          <code>uucode</code>
+        </div>
+      </label>
+
+      <label for = "uat">
+        <div class = "tx">
+          <div>useragent</div>
+          <select onchange="myUat(this.value)">
+            <option value="iPad">iPad</option>
+            <option value="iOS">iOS</option>
+            <option value="Android">Android</option>
+            <option value="Edge">Edge</option>
+            <option value="NewEdge">NewEdge</option>
+            <option value="IE">IE</option>
+            <option value="Chrome">Chrome</option>
+            <option value="Firefox">Firefox</option>
+            <option value="Safari">Safari</option>
+            <option value="custom">カスタム</option>
+          </select>
+          <input type = "text" id ="customUat" value ="ああ" placeholder = "カスタム" size = "35" onchange="myCustomUat(this.value)" disabled="true"/>
+          <code>choose</code>
+        </div>
+      </label>
+
+      <label for = "send">
+        <div class = "tb" for="button">
+          <input id ="send" type="button" value="送信" onclick="myButton(this.value)" />
+        </div>
+      </label>
+
+    </div>
+  </div>
+
+
+  <footer></footer>
 
  </body>
 </html>
