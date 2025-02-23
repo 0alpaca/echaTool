@@ -7,8 +7,6 @@
  <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
  <meta property = "og:image" content = "https://pictsense.com/img/game_image.jpg" />
  <link rel = "stylesheet" href = "./style.css">
- <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
- <script src = "http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
  <script src = "./main.js"></script>
  </head>
  <body>
@@ -23,17 +21,17 @@
     <div id = "txa">
 
       <label for = "hash">
-        <div class = "tx" for = "hash">
+        <div class = "tx">
           <div>hash</div>
-          <input type = "text"  placeholder = "12345678" size = "35" onchange="myHash(this.value)" />
+          <input id = "hash" type = "text"  placeholder = "12345678" size = "35" onchange="myHash(this.value)" />
           <code>hash</code>
         </div>
       </label>
 
       <label for = "wss">
-        <div class = "tx" for = "wss">
+        <div class = "tx">
           <div>wss</div>
-          <input type = "text" placeholder = "wss://draw-ydc2.kuku.lu:12345" size = "35" onchange="myWss(this.value)" />
+          <input id = "wss" type = "text" placeholder = "wss://draw-ydc2.kuku.lu:12345" size = "35" onchange="myWss(this.value)" />
           <code>ws.url</code>
         </div>
       </label>
@@ -41,7 +39,7 @@
       <label for = "uucode">
         <div class = "tx">
           <div>uucode</div>
-          <input type = "text" placeholder = "abcdefghijklmn0123456789opqrstuv" size = "35" onchange="myUucode(this.value)" />
+          <input id = "uucode" type = "text" placeholder = "abcdefghijklmn0123456789opqrstuv" size = "35" onchange="myUucode(this.value)" />
           <code>uucode</code>
         </div>
       </label>
@@ -49,7 +47,7 @@
       <label for = "uat">
         <div class = "tx">
           <div>useragent</div>
-          <select onchange="myUat(this.value)">
+          <select id = "uat" onchange="myUat(this.value)">
             <option value="iPad">iPad</option>
             <option value="iOS">iOS</option>
             <option value="Android">Android</option>
@@ -61,14 +59,14 @@
             <option value="Safari">Safari</option>
             <option value="custom">カスタム</option>
           </select>
-          <input type = "text" id ="customUat" value ="ああ" placeholder = "カスタム" size = "35" onchange="myCustomUat(this.value)" disabled="true"/>
+          <input type = "text" id ="customUat" placeholder = "カスタム" size = "35" onchange="myCustomUat(this.value)" disabled="true"/>
           <code>choose</code>
         </div>
       </label>
 
       <label for = "send">
         <div class = "tb" for="button">
-          <input id ="send" type="button" value="送信" onclick="myButton(this.value)" />
+          <input id = "send" type="button" value="送信" onclick="myButton(this.value)" />
         </div>
       </label>
 
