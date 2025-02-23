@@ -14,7 +14,8 @@ body {
 
 input, select {
   background-color: #404040;
-  color: #6f6
+  color: #6f6;
+  user-select: none;
 }
 
 input:hover {
@@ -22,8 +23,8 @@ input:hover {
   color: #5e5;
 }
 
-::placeholder {
-  color: #aaa
+[disabled]::placeholder {
+  color: #444
 }
 
 input[type="text"]:focus, select:focus {
@@ -91,6 +92,5 @@ div.tb:hover {
 }
 
 code {
-  color: #480
+  color: #480;
 }
-
